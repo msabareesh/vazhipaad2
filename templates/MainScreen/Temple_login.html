@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<br>
+    {% comment %} <img src="{{ MEDIA_URL }}{{ object.shop_logo.url }}" /><br>
+    {{ object.shop_name }}<br>
+    {{ object.shop_address }}<br>
+    {{ object.shop_state }}<br>
+    {{ object.shop_district }}<br>
+    {{ object.shop_mail }}<br>
+    {{ object.shop_mobile }}<br>
+    {{ object.created_by }}<br> {% endcomment %}
+    <h2>Welcome to {{ object.temple_name }}</h2>
+							<div class="btn-box-row row-fluid">
+								<a href="#" class="btn-box big span4">
+									<i class="fas fa-file-invoice"></i>
+									<b>Bookings</b>
+								</a>
+								<a href="{% url 'Products:Product-List' %}" class="btn-box big span4">
+									<i class="fab fa-product-hunt"></i>
+									<b>Offerings</b>
+								</a>
+								<a href="#" class="btn-box big span4">
+									<i class="fas fa-chart-pie"></i>
+									<b>Report Hub</b>
+								</a>
+                    </div>            
+                    <div class="btn-box-row row-fluid">
+                                <a href="#" class="btn-box big span4">
+									<i class="fas fa-user-plus"></i>
+									<b>Add Staff</b>
+								</a>
+                                <a href="#" class="btn-box big span4">
+									<i class="fas fa-store-alt"></i>
+									<b>Temple Calender</b>
+								</a>
+                                <a href="#" class="btn-box big span4">
+									<i class="fas fa-cogs"></i>
+									<b>Profile<sup>**</sup></b>
+								</a>
+							</div>
+
+{% endblock %}
+

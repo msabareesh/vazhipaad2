@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<br>
+    <h2>Welcome to {{ object.temple_name }}</h2>
+							<div class="btn-box-row row-fluid">
+								<a href="#" class="btn-box big span4">
+									<i class="fas fa-file-invoice"></i>
+									<b>Book an Offering</b>
+								</a>
+								<a href="{% url 'Products:Product-List' %}" class="btn-box big span4">
+									<i class="fab fa-product-hunt"></i>
+									<b>Temples Near Me</b>
+								</a>
+								<a href="#" class="btn-box big span4">
+									<i class="fas fa-chart-pie"></i>
+									<b>My Bookings</b>
+								</a>
+                    </div>            
+                    <div class="btn-box-row row-fluid">
+                                <a href="#" class="btn-box big span4">
+									<i class="fas fa-user-plus"></i>
+									<b>Members List</b>
+								</a>
+                                <a href="#" class="btn-box big span4">
+									<i class="fas fa-store-alt"></i>
+									<b>Offers<sup>**</sup></b>
+								</a>
+                                <a href="#" class="btn-box big span4">
+									<i class="fas fa-cogs"></i>
+									<b>Profile</b>
+								</a>
+							</div>
+
+{% endblock %}
+

@@ -1,0 +1,9 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+<h3> Temples <h3>
+<br>
+    {{ object.templeName }}<br>
+    {{ object.templeDescription }}
+    <img src="{{object.templeImage.url}}" alt=""/>
+{% endblock %}

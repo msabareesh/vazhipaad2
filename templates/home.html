@@ -1,0 +1,14 @@
+{% include 'base.html'%}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Wecome to Vazhipaad !</h1>
+  <p class="lead">This is an Application built to enable Devotees to book offerings (vazhipaad) in any Temple. For Temple Management, this application can keep track of your daily transactions online or at your counter.</p>
+  <hr class="my-4">
+  <p>Login to your profile if you already have account with us. Else Feel free to create now by Signing up.</p>
+  <p class="lead">Happy Booking  </p>
+  <a class="btn btn-primary btn-lg" href="{% url 'account_login' %}">Login</a>
+  <a class="btn btn-info btn-lg" href="{% url 'account_signup' %}">Sign up</a>
+</div>
