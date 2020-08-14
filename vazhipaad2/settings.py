@@ -143,7 +143,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/Temple'
 ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
-ROOT_URLCONF = 'vazhipaad2.urls'
+ROOT_URLCONF = 'vazhipaad2.vazhipaad2.urls'
 
 AUTH_USER_MODEL = 'User.User'
 STATICFILES_DIRS = [
