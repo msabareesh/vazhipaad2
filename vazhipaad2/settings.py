@@ -145,7 +145,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/Temple'
+LOGIN_REDIRECT_URL = '/temples'
 ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
 ROOT_URLCONF = 'vazhipaad2.urls'
 
