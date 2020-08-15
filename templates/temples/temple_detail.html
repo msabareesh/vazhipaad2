@@ -3,7 +3,11 @@
 {% block content %}
 <h3> Temples <h3>
 <br>
-    {{ object.templeName }}<br>
-    {{ object.templeDescription }}
-    <img src="{{object.templeImage.url}}" alt=""/>
+    {{ object.temple_name }}<br>
+    {{ object.temple_description }}
+    <img src="{{object.temple_image.url}}" alt=""/>
+
+
+{% comment %} <a class="btn btn-success btn-lg" href="{% url 'temples:Temple-Delete' %}">Delete Temple</a>
+<a class="btn btn-success btn-lg" href="{% url 'temples:Temple-Update' %}">Update Temple</a> {% endcomment %}
 {% endblock %}

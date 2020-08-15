@@ -37,9 +37,19 @@ class TempleUpdateView(UpdateView):
 class TempleListView(ListView):
     template_name = "temples/temple_list.html"
     queryset = Temple.objects.all()
+    # queryset = ShopName.objects.all()
+
+    # def get_queryset(self):
+    #     qs = super(TempleListView, self).get_queryset()
+    #     user_id = InventoryUser.objects.filter(
+    #         username=self.request.user).values_list('id', flat=True)
+    #     return ShopName.objects.filter(created_by__in=user_id)
+
+    # queryset = get_queryset
 
 
 class TempleDetailView(DetailView):
+    template_name = "temples/temple_detail.html"
     queryset = Temple.objects.all()
 
     def get_object(self):

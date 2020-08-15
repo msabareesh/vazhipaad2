@@ -3,7 +3,7 @@
 {% block content %}
 <form action="" method="POST">
 {% csrf_token %}
-<h2> Do you really want to delete the Temple : "{{ object.templeName }}" ?</h2>
+<h2> Do you really want to delete the Temple : "{{ object.temple_name }}" ?</h2>
 <p><input type="submit" value="Yes"/> <a href="../"> Cancel </a></p>
 
 </form>

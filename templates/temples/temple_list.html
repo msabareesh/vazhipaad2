@@ -22,15 +22,17 @@
         <tr>
             <th>
                 <p>
-                <a href={{ temple.get_absolute_url }}> {{ temple.templeName }} </a></p>
+                <a href={{ temple.get_absolute_url }}> {{ temple.temple_name }} </a></p>
             </th>
-            <th> {{ temple.templeDescription }}</th>
-            <th> {{ temple.templePlace }}</th>
-            <th> {{ temple.templeMainIdol }}</th>
-            <th> {{ temple.templeDistrict }}</th>
+            <th> {{ temple.temple_description }}</th>
+            <th> {{ temple.temple_place }}</th>
+            <th> {{ temple.temple_main_idol }}</th>
+            <th> {{ temple.temple_district }}</th>
 {% endfor %}
     <tbody>
         </table>
     </div>
 </div>
+
+<a class="btn btn-success btn-lg" href="{% url 'temples:Temple-Create' %}">Create Temple</a>
 {% endblock %}
