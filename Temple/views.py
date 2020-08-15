@@ -35,6 +35,7 @@ class TempleUpdateView(UpdateView):
 
 
 class TempleListView(ListView):
+    template_name = "temples/temple_list.html"
     queryset = Temple.objects.all()
 
 
