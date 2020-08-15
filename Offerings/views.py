@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .serializers import Temple_Offering_Serializer
+from .serializers import Temple_Offering_Serializer, TempleOfferingSerializer
 from rest_framework.generics import ListAPIView
 
 from .models import *
@@ -20,6 +20,11 @@ def offeringsDataAPI(request):
                          'category': i.offering_type, 'id': i.id})
     #jsonopt = jsonpickle.encode(dataList)
     return JsonResponse(dataList, safe=False)
+
+
+class OfferingListView(ListAPIView):
+    queryset = Temple_Offering.objects.all()
+    serializer_class = TempleOfferingSerializer
 
 
 @csrf_exempt

@@ -1,10 +1,12 @@
 from django.urls import path
-from . import views
+from .views import OfferingListView, offeringsDataAPI, createOfferings, updateOfferings, deleteOfferings, index
 
 urlpatterns = [
-    path('', views.index),
-    path('offeringsapi/', views.offeringsDataAPI),
-    path('createofferings/', views.createOfferings),
-    path('updateofferings/', views.updateOfferings),
-    path('deleteofferings/', views.deleteOfferings),
+    path('', index),
+    path('offeringsapi/', offeringsDataAPI),
+    path('createofferings/', createOfferings),
+    path('updateofferings/', updateOfferings),
+    path('deleteofferings/', deleteOfferings),
+    path('TempleOfferingsAPI/', OfferingListView.as_view(),
+         name='Temple-Offering-API'),
 ]
